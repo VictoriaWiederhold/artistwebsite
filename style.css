@@ -1,0 +1,15 @@
+p{
+    color: rgb(255, 255, 255);
+    font-size: 5vw;
+    font-family: Ruritania;
+}
+
+body{
+    background-color: black;
+}
+
+@font-face{
+
+    font-family: Ruritania;
+    src: url(./fonts/Ruritania-Outline.ttf)
+}
