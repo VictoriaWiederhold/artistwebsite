@@ -1,7 +1,10 @@
-p{
-    color: rgb(255, 255, 255);
-    font-size: 5vw;
-    font-family: Fleur;
+
+body {
+    font-family: Milven;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
 }
 
 body{
@@ -54,7 +57,7 @@ body{
 }
 
 .card-back {
-    background: #222;
+    background: #551b1b;
     color: #fff;
     transform: rotateY(180deg);
     padding: 20px;
