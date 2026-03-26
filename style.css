@@ -8,8 +8,9 @@
     font-family: Milven;
     text-align: center;
     font-size: 3vw;
-    color: rgb(187, 76, 32);
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    background-color: rgb(125, 72, 44);
 }
 
 p{
