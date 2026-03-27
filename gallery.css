@@ -3,15 +3,18 @@ body {
     font-family: Milven;
     background-color: rgb(53, 26, 12);
     margin: 0;
-    padding: 40px;
+    padding: 30px;
     text-align: center;
+    ;
 }
 
 
 .title {
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin-bottom: 40px;
     color: rgb(125, 72, 44);
+    font-weight: normal;
+    font-family: Ruritania;
 }
 
 .gallery {
@@ -70,6 +73,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    font-weight: normal;
 }
 .card-front {
     position: relative;
