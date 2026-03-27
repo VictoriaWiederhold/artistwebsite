@@ -1,11 +1,11 @@
 p{
     color: rgb(255, 255, 255);
     font-size: 5vw;
-    font-family: Rubens;
+    font-family: Fleur;
 }
 
 body{
-    background-color: black;
+    background-color: rgb(125, 72, 44);
 }
 @font-face{
 

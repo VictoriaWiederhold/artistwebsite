@@ -1,0 +1,96 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Fleur;
+    background-color: rgb(125, 72, 44);
+    color: #e8e3e3;
+    line-height: 1.6;
+}
+
+/* Container */
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Hero section */
+.about-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.about-hero img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.about-intro h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.about-intro p {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Section styling */
+.about-section {
+    margin-bottom: 60px;
+}
+
+.about-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    padding-left: 12px;
+}
+
+.about-section p {
+    max-width: 700px;
+    color: #ffffff;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .about-intro h1 {
+        font-size: 2rem;
+    }
+}
+@font-face{
+
+    font-family: Ruritania;
+    src: url(./fonts/Ruritania-Outline.ttf)
+}
+
+@font-face{
+    font-family: Fleur;
+    src: url(./fonts/FleurDeLeah-Regular.ttf);
+}
+
+@font-face{
+    font-family: kingjola;
+    src: url(./fonts/kingjola.ttf)
+}
+
+@font-face{
+    font-family: Rubens;
+    src: url(./fonts/Rubens\ Regular.ttf)
+}

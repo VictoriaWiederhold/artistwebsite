@@ -11,31 +11,10 @@
 
 <div class="gallery">
 
-    <!-- Artwork 1 -->
-    <div class="card">
-        <div class="card-inner">
-            <div class="card-front">
-                <img src="./work/moderation.jpeg" alt="Moderation">
-            </div>
-            <div class="card-back">
-                <h3>Moderation</h3>
-                <p>Oil on Canvas,1m x 1mx1m</p>
-            </div>
-        </div>
-    </div>
+   
 
-    <!-- Artwork 2 -->
-    <div class="card">
-        <div class="card-inner">
-            <div class="card-front">
-                <img src="./work/Spiraldiva.png" alt="Spiraldiva">
-            </div>
-            <div class="card-back">
-                <h3>Spiraldiva</h3>
-                <p>Affinity Vector, Webdesigncours at LMU</p>
-            </div>
-        </div>
-    </div>
+    
+    
 
     <div class="card">
         <div class="card-inner">
@@ -64,7 +43,7 @@
 <div class="card">
         <div class="card-inner">
             <div class="card-front">
-                <img src="images/artwork2.jpg" alt="Artwork 2">
+                <img src="./work/aminatou_closeup.jpeg" alt="Artwork 2">
             </div>
             <div class="card-back">
                 <h3>Artwork Title 2</h3>
@@ -75,7 +54,7 @@
 <div class="card">
         <div class="card-inner">
             <div class="card-front">
-                <img src="images/artwork2.jpg" alt="Artwork 2">
+                <img src="work/Blau.jpg" alt="Artwork 2">
             </div>
             <div class="card-back">
                 <h3>Artwork Title 2</h3>
@@ -86,7 +65,7 @@
 <div class="card">
         <div class="card-inner">
             <div class="card-front">
-                <img src="images/artwork2.jpg" alt="Artwork 2">
+                <img src="work/crumbled.jpeg" alt="Artwork 2">
             </div>
             <div class="card-back">
                 <h3>Artwork Title 2</h3>
@@ -97,7 +76,7 @@
 <div class="card">
         <div class="card-inner">
             <div class="card-front">
-                <img src="images/artwork2.jpg" alt="Artwork 2">
+                <img src="work/moderation.jpeg" alt="Artwork 2">
             </div>
             <div class="card-back">
                 <h3>Artwork Title 2</h3>
@@ -105,63 +84,101 @@
             </div>
         </div>
     </div>
+
 <div class="card">
         <div class="card-inner">
             <div class="card-front">
-                <img src="images/artwork2.jpg" alt="Artwork 2">
+                <img src="work/Orange.jpg" alt="Artwork 2">
             </div>
             <div class="card-back">
-                <h3>Artwork Title 2</h3>
-                <p>A study of organic forms and movement, created using mixed media techniques.</p>
+                <h3>Gold</h3>
+                <p>Aquarell on Paper, A0</p>
             </div>
         </div>
     </div>
 <div class="card">
         <div class="card-inner">
             <div class="card-front">
-                <img src="images/artwork2.jpg" alt="Artwork 2">
+                <img src="work/Safethem.jpg" alt="Keep me safe">
             </div>
             <div class="card-back">
-                <h3>Artwork Title 2</h3>
-                <p>A study of organic forms and movement, created using mixed media techniques.</p>
+                <h3>Keep me safe</h3>
+                <p>Aquarell on Paper, A0</p>
             </div>
         </div>
     </div>
 <div class="card">
         <div class="card-inner">
             <div class="card-front">
-                <img src="images/artwork2.jpg" alt="Artwork 2">
+                <img src="work/Schatten.jpg" alt="Schatten">
             </div>
             <div class="card-back">
-                <h3>Artwork Title 2</h3>
-                <p>A study of organic forms and movement, created using mixed media techniques.</p>
+                <h3>Schatten</h3>
+                <p>Acrylic on canvas, A5</p>
             </div>
         </div>
     </div>
 <div class="card">
         <div class="card-inner">
             <div class="card-front">
-                <img src="images/artwork2.jpg" alt="Artwork 2">
+                <img src="./work/Spiraldiva.png" alt="Spiraldiva">
             </div>
             <div class="card-back">
-                <h3>Artwork Title 2</h3>
-                <p>A study of organic forms and movement, created using mixed media techniques.</p>
-            </div>
-        </div>
-    </div>
-<div class="card">
-        <div class="card-inner">
-            <div class="card-front">
-                <img src="images/artwork2.jpg" alt="Artwork 2">
-            </div>
-            <div class="card-back">
-                <h3>Artwork Title 2</h3>
-                <p>A study of organic forms and movement, created using mixed media techniques.</p>
+                <h3>Spiraldiva</h3>
+                <p>Affinity Vector, Webdesigncours at LMU</p>
             </div>
         </div>
     </div>
 
 </div>
+<div id="viewer" style="
+display:none;
+position:fixed;
+top:0; left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+z-index:999;
+">
+    <img id="viewer-img" style="max-width:90%; max-height:90%;">
+</div>
 
+
+<script>
+const viewer = document.getElementById("viewer");
+const viewerImg = document.getElementById("viewer-img");
+
+document.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("click", () => {
+        const img = card.querySelector("img");
+        viewer.style.display = "flex";
+        viewerImg.src = img.src;
+    });
+});
+
+viewer.addEventListener("click", () => {
+    viewer.style.display = "none";
+});
+
+function fixCardHeights() {
+    document.querySelectorAll(".card").forEach(card => {
+        const img = card.querySelector("img");
+        const inner = card.querySelector(".card-inner");
+
+        if (img.complete) {
+            inner.style.height = img.offsetHeight + "px";
+        } else {
+            img.onload = () => {
+                inner.style.height = img.offsetHeight + "px";
+            };
+        }
+    });
+}
+
+window.addEventListener("load", fixCardHeights);
+window.addEventListener("resize", fixCardHeights);
+</script>
 </body>
 </html>
