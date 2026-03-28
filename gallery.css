@@ -8,6 +8,17 @@ body {
     ;
 }
 
+@media (max-width: 1200px) {
+    .gallery { column-count: 3; }
+}
+
+@media (max-width: 900px) {
+    .gallery { column-count: 2; }
+}
+
+@media (max-width: 600px) {
+    .gallery { column-count: 1; }
+}
 
 .title {
     font-size: 4rem;
