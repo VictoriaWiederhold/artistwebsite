@@ -8,11 +8,18 @@
 .link{
     width:33vw;
     font-family: Milven;
+    font-weight: normal;
     text-align: center;
     font-size: 3vw;
     color: rgb(255, 255, 255);
     text-decoration: none;
     background-color: rgb(125, 72, 44);
+    transition: all 0.3s ease;
+}
+.link:hover {
+    background-color: rgb(150,90,55);
+    transform: scale(1.05);
+    letter-spacing: 0.1vw;
 }
 
 p{
