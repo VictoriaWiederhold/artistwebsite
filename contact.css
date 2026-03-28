@@ -1,4 +1,4 @@
-p{
+/*p{
     color: rgb(255, 255, 255);
     font-size: 2rem;
     font-family: Fleur;
@@ -18,7 +18,44 @@ a {
 
 a:hover {
     opacity: 0.7;
+*/
+body {
+    background-color: rgb(125, 72, 44);
+    font-family: Fleur, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
+
+.contact-frame {
+    width: 80%;
+    max-width: auto ;
+    padding: 40px;
+    background-image: url('./work/rahmen.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+
+.contact-frame p {
+    font-size: 1.6rem;
+    margin: 15px 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
 @font-face{
 
     font-family: Ruritania;
